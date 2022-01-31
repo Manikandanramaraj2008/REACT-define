@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+React is a declarative, efficient, and flexible JavaScript library 
+for building user interfaces.
+compose complex UIs from small and isolated pieces of code called “components”.
+
+Base React Interview Questions
+General questions and concepts to prepare for a React-based interview.
+Midi
+Midi
+
+React Logo
+1. What is React?
+React is a UI (front-end) SPA (single-page application) 
+JavaScript library developed by Facebook in 2011. 
+It is used to build UI components.
+2. What are some key features of React?
+Using the Virtual DOM instead of the real DOM
+Using server-side rendering
+Following a uni-directional data flow
+3. Explain what the Virtual DOM is and how it works.
+First, it’s important to understand what 
+the real DOM is — then it’ll be easier to understand 
+the concept of the virtual DOM and why it’s an amazing 
+feature in React.
+The Real DOM
+What it is: DOM stands for Document Object Model.
+ The DOM is an interface that represents a document (like an HTML document or XML document) with a logical tree. In simpler terms, it represents the UI of an application.
+What makes it slow: Every time there is a change to 
+the state of your application, the DOM needs to be updated to reflect that change. With each change, the UI needs to be repainted (re-rendered). This repainting process is slow. This is where the true benefit of the Virtual DOM comes.
+Below is an HTML page:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New York City</title>
+  </head>
+  <body>
+    <h1>New York City: The 5 Boroughs</h1>
+	<h2>Brooklyn</h2>
+  </body>
+</html>
+The DOM instance of the HTML page would be like:
+
+The Virtual DOM
+What it is: Its a lightweight JavaScript object that’s 
+originally just a copy (a virtual representation) of the
+ real DOM.
+How it works:
+Via React, only the # of likes is updated in the screens
+ below when the user clicks the like button, instead of the entire UI being updated. Basically, all other elements are left as-is.
+
+Step-by-step:
+Whenever any underlying data changes, the entire UI is
+ re-rendered in virtual DOM.
+
+2. Then the difference between the previous DOM 
+representation and the new one is calculated.
+
+3. Once the calculations are done, the real DOM will be 
+updated with only the things that have actually changed.
+
+Why its faster: Because there are minimal operations on the real DOM, this makes the re-rendering of the UI much quicker.
+4. What are some key differences between the real DOM and the Virtual DOM?
+
+Differences between real vs. virtual DOM
+5. What is JSX?
+JSX stands for JavaScript XML. It is a syntax extension 
+to JavaScript that looks a lot like HTML.
+It allows us to easily add HTML to React. Although 
+it is not required to use JSX in React apps, it is standard practice.
+Example using JSX:
+const name = <h1>Ayaan Khan</h1>;
+
+ReactDOM.render(name, document.getElementById('root'));
+Example without JSX:
+const name = React.createElement('h1', {}, 'Ayaan Khan');
+
+ReactDOM.render(name, document.getElementById('root'));
+6. What is Babel?
+Babel is a JavaScript compiler that can translate 
+markup or programming languages into JavaScript.
+Babel is available for different conversions. 
+React uses Babel to convert JSX into JavaScript.
+7. What is server-side rendering?
+Server-side rendering (SSR) is an application’s 
+ability to convert HTML files on the server into a fully rendered HTML page for the client.
+The web browser submits a request for information 
+from the server, which instantly responds by sending
+ a fully rendered page to the client.
+
+Diagram how server-side rendering works
+8. What is a uni-directional data flow?
+Uni-directional data flow is also known as one-way data flow, 
+which means the data has only one way to be transferred 
+to other parts of the application.
+This means that child components are not able to 
+update the data that is coming from the parent components. 
+In React, data coming from a parent is called props.
+9. What are some benefits of a uni-directional data flow?
+Greater Control: The major benefit of this 
+approach is that data flows throughout your 
+app in a single direction, giving you better 
+control over it.
+Easier Debugging: As you know what data is 
+coming from where.
+Less Error-Prone: As you have more control over the data.
+Greater Efficiency: As the library knows what the 
+boundaries are of each part of the system.
+10. What is an element in React?
+Elements are the smallest building blocks of React apps. They describe what you want to see on the app.
+Example of an element:
+const element = <h1>Hi, I'm an element!</h1>;
+11. What is a component in React?
+Components are the building blocks of a 
+React application’s UI. These components split up the 
+entire UI into small independent and reusable pieces. 
+Then, it renders each of these components independent 
+of each other without affecting the rest of the UI.
+Conceptually, components are like JavaScript functions. 
+They accept arbitrary inputs (called “props”) 
+and return React elements describing what 
+should appear on the screen.
+12. What are props?
+props stands for properties. They are like 
+arguments sent to React components.
+Example:
+const myelement = <Car brand="Ford" />;
+The Car component then receives the arguments as props:
+function Car(props) {
+  return <h2>I am a { props.brand }!</h2>;
+}
+
+
+
+
+
+
+    </script>
+</body>
+</html>
